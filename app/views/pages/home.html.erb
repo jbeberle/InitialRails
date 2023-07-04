@@ -1,1 +1,17 @@
-<h1>Hello World!</h1>
+<div id="page-content">
+  <div class="container" id="home-container">
+    <div class="p-3 mb-2 bg-secondary text-white text-center">
+      <%= render 'layouts/messages' %>
+      <h1>Alpha Blog</h1>
+      <%= link_to "Articles listing", articles_path() %>
+      <%= link_to "About", about_path() %>
+      <a class="btn btn-success btn-lg" href="#" role="button">Sign up!</a>
+    </div>
+  </div>
+</div>
+
+<footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white">
+  <div class="container text-center">
+    <small>Copyright &copy; Your Website</small>
+  </div>
+</footer>

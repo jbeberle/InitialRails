@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Articles</h1>
+
+<div id="articles">
+  <table>
+    <thead>
+       <tr>
+         <th>Title</th>
+         <th>Descript</th>
+         <th>Actions</th>
+       </tr>
+    </thead>
+
+    <tbody>
+    <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.description %></td>
+          <td><%= link_to "Delete", article_path(article), data: { "turbo_method": :delete, turbo_confirm: "Are you sure?"} %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
